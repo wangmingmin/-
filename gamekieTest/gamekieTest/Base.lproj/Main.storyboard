@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hxB-gp-6l2">
+                                <rect key="frame" x="85" y="66" width="431" height="30"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="send">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnSend:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0vy-VP-y5M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hnZ-ib-9Mr" customClass="myView">
+                                <rect key="frame" x="85" y="201" width="431" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="connect">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnConnect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qFm-Cz-QcN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QR8-hC-6ng" customClass="myView">
+                                <rect key="frame" x="85" y="260" width="431" height="30"/>
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="disconnect">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.80000001190000003" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="btnDisconnect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GWa-nn-TJO"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t2L-eN-09P">
+                                <rect key="frame" x="85" y="28" width="431" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="miG-LN-Ofa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="miG-LN-Ofa"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="miG-LN-Ofa"/>
+                                    </mask>
+                                </variation>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hnZ-ib-9Mr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="605-h6-1cO"/>
+                            <constraint firstItem="hxB-gp-6l2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8SC-Re-CVL"/>
+                            <constraint firstItem="t2L-eN-09P" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="8Xl-xp-g4T"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="t2L-eN-09P" secondAttribute="leading" id="ERL-GL-nkc"/>
+                            <constraint firstItem="QR8-hC-6ng" firstAttribute="top" secondItem="hnZ-ib-9Mr" secondAttribute="bottom" constant="29" id="Fi4-R9-qxh"/>
+                            <constraint firstItem="hxB-gp-6l2" firstAttribute="top" secondItem="t2L-eN-09P" secondAttribute="bottom" constant="8" id="JCu-gq-4yC"/>
+                            <constraint firstItem="hnZ-ib-9Mr" firstAttribute="top" secondItem="hxB-gp-6l2" secondAttribute="bottom" constant="105" id="K0f-HR-N0Q"/>
+                            <constraint firstItem="QR8-hC-6ng" firstAttribute="width" secondItem="hnZ-ib-9Mr" secondAttribute="width" id="i2G-AI-mdg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="t2L-eN-09P" secondAttribute="trailing" id="xOy-hr-Gm3"/>
+                            <constraint firstItem="QR8-hC-6ng" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xQp-fe-Uwc"/>
+                            <constraint firstItem="hxB-gp-6l2" firstAttribute="width" secondItem="t2L-eN-09P" secondAttribute="width" id="xyi-vH-1VT"/>
+                            <constraint firstItem="hnZ-ib-9Mr" firstAttribute="width" secondItem="hxB-gp-6l2" secondAttribute="width" id="zrm-vk-fcC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="8Xl-xp-g4T"/>
+                                <exclude reference="ERL-GL-nkc"/>
+                                <exclude reference="xOy-hr-Gm3"/>
+                                <exclude reference="8SC-Re-CVL"/>
+                                <exclude reference="JCu-gq-4yC"/>
+                                <exclude reference="xyi-vH-1VT"/>
+                                <exclude reference="605-h6-1cO"/>
+                                <exclude reference="K0f-HR-N0Q"/>
+                                <exclude reference="zrm-vk-fcC"/>
+                                <exclude reference="Fi4-R9-qxh"/>
+                                <exclude reference="i2G-AI-mdg"/>
+                                <exclude reference="xQp-fe-Uwc"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="8Xl-xp-g4T"/>
+                                <include reference="ERL-GL-nkc"/>
+                                <include reference="xOy-hr-Gm3"/>
+                                <include reference="8SC-Re-CVL"/>
+                                <include reference="JCu-gq-4yC"/>
+                                <include reference="xyi-vH-1VT"/>
+                                <include reference="605-h6-1cO"/>
+                                <include reference="K0f-HR-N0Q"/>
+                                <include reference="zrm-vk-fcC"/>
+                                <include reference="Fi4-R9-qxh"/>
+                                <include reference="i2G-AI-mdg"/>
+                                <include reference="xQp-fe-Uwc"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="connect" destination="hnZ-ib-9Mr" id="VWu-Cf-5Xz"/>
+                        <outlet property="disconnect" destination="QR8-hC-6ng" id="LNq-Og-gvc"/>
+                        <outlet property="send" destination="hxB-gp-6l2" id="3Uf-mo-1Te"/>
+                        <outlet property="txtMessage" destination="t2L-eN-09P" id="6Tm-g8-mIs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="382.5" y="420"/>
+        </scene>
+    </scenes>
+</document>
